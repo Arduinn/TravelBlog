@@ -25,9 +25,6 @@ SECRET_KEY = '1b2)gy3-f_4i+r#-hmdye_79$!)a3tsp8z!ys(@7*0@5!qq-c2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -55,7 +52,7 @@ ROOT_URLCONF = 'BartDias.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ["/home/arduin/Documents/Web Development/WebSites/BartDias/blog/templates/blog/"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -119,3 +116,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+

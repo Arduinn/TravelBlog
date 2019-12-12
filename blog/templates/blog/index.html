@@ -1,63 +1,7 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{% extends 'blog/base.html' %}
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+{% block content  %}
 
-    <!-- google font -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
-    <!-- CSS Style -->
-    <link rel="stylesheet" href="css/estilo.css" title="" type="text/css">
-
-    <!-- stylesheets -->
-    <link rel="stylesheet" href="css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="css/slicknav.min.css"/>
-
-    <!-- main stylesheets -->
-    <link rel="stylesheet" href="css/style.css"/>
-
-    <title>Bartolomeu Dias</title>
-    <link rel="icon" href="imagens/favicon.png">
-  </head>
-  
-  <body>
-
-  <!-- Header-->
-  <header class="bg-imagem">
-   <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-      <div class="container-fluid">
-       
-        <a href="index.html" class="ml-5 navbar-brand logo">
-          <span style="color: #007437">Bartolomeu </span><span class="color: #6A707F">Dias</span>
-        </a>
- 
- 
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-
-
-        <div class="collapse navbar-collapse topnav mr-5" id="nav-principal">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-link"><a class="nav-item active" href="index.html">Home</a></li>
-            <li class="nav-link"><a class="nav-item" href="posts.html">Posts</a></li>
-            <li class="nav-link"><a class="nav-item" href="wIm.html">Who I Am</a></li>
-            <li class="nav-link"><a class="nav-item" href="gallery.html">Gallery</a></li>
-            <li class="nav-link"><a class="nav-item" href="contact.html">Contact</a></li>
-          </ul>
-        </div>  
-     
-      </div>
-    </nav>
-  </header>
-  <!--Header End-->
-  
 <section class="banner-section">
 </section>
 
@@ -80,31 +24,16 @@
   
   <h2 class="h1-responsive font weight-bold text-center my-3">About the Blog</h2>
   <p class="text-justify dark-grey-text w-responsive mx-auto mb-5">
-    History is fascinating, recall the facts that shaped our world is one of my favourite hobbys. Our society may not be perfect, actually we are far beyond that, yet humankind is teeming of great acts that desirve to be remembered. Many characters played a role in the curse of earth fate, inspiring us in different ways, pushing us to new places to face adventures. 
+    History is fascinating, recall the facts that shaped our world is one of my favourite hobbies. Our society may not be perfect, actually we are far beyond that, yet humankind is teeming of great acts that deserve to be remembered. Many characters played a role in the curse of earth fate, inspiring us in different ways, pushing us to new places to face adventures. I don’t know why but Portugueses play an important motivational attitudes on my life, may be because Brazil is an old Portugal colony and due that our histories are tied. During my school days I remember my teacher telling about the places Portuguese went and achievement they had. One of my favourites stories is about Bartolomeu Dias, Portuguese discovery from century XV. He was the first to cross the Cape of Storms, lately renamed to Cape of Good Hope. 
   </p>
   
-  <p>
-    The age of navegations came to it end when all the world became  
+
+  <p class="text-justify dark-grey-text w-responsive mx-auto mb-5">
+  
+  This website is my way to tell about my own adventures in a far away land. I am facing a challenge much more safe than Bartolomeu Dias faced on his time, but yet full of wonderful and mysterious. I came to India, one of the most ancient civilizations in the Earth. 
+
   </p>
-    <img src="imagens/caravela.jpg" alt="" id="caravela">
 
   </section>
 
-
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
-
-  <!--Footer -->
-  <footer>
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3"> <span style="color: white">© 2018 Copyright:</span>    
-    <a href="https://mdbootstrap.com/education/bootstrap/"> https//:www.bartolomeudias.com</a>
-  </div>
-
-  </footer>
-</html>
+{% endblock%}
