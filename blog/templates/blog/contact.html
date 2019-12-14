@@ -2,39 +2,14 @@
 
 {% block content %}
 
-<section class='my-5 mx-5'>
- <div class="container">
- <h1 class="h1-responsive font-weight-bold text-center my-4">Contact form</h1>
+  <h1>Contact Form </h1>
 
- <div class="row">
-   <div class="col-md-6">
-    <address> Mumbai - India</address>
-    <p>Email:- victor.awecki@gmail.com</p>
-    <p>Phone:- +91 91678 42381</p>
-   </div>
-    
-   <div class="col-md-6">
-    
-     <div class="form-group">
-      <label for="">Email</label>
-      <input type="text" class="form-control" placeholder="name@email.com">
-     </div>
-  
-    <div class="form-group">
-      <label for="">Message</label>
-      <textarea class="form-control" cols="30" rows="10"></textarea>
-    </div>
-   
-    <div class="form-group">
-      <button class="btn btn-dark btn clock">Submit</button>
-    
-    </div>  
+  <form action="" method="POST">
 
-   </div>
-    
- </div>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit"/>
 
- </div>
-</section>
+  </form>
 
 {% endblock %}

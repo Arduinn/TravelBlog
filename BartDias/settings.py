@@ -25,6 +25,13 @@ SECRET_KEY = '1b2)gy3-f_4i+r#-hmdye_79$!)a3tsp8z!ys(@7*0@5!qq-c2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# SMTP (Simple Mail Transfer Protocol)
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'bartolomeu.dias.adventure@gmail.com'
+EMAIL_HOST_PASSWORD = 'bnktp8411#'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+
 # Application definition
 
 INSTALLED_APPS = [
