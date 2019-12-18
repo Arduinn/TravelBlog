@@ -18,10 +18,9 @@ class Post(models.Model):
         return self.title
 
 class Contact(models.Model):
-    first_name = models.CharField(max_length=50)
-    last_mame = models.CharField(max_length=50)
-    email = models.EmailField()
-    message = models.TextField()
+    name = models.CharField(max_length=50)
+    email = models.CharField(max_length=70, default='')
+    desc = models.CharField(max_length=500, default='')
 
     def __str__(self):
-        return f'{self.first_name} {self.last_name}'
+        return self.name 
