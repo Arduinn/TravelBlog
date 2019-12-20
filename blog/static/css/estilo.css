@@ -6,7 +6,6 @@ body{
 
 footer{
   background: #343940;
-  position: fixed;
   bottom: 0;
   width: 100%;
   text-align: center;  
@@ -19,7 +18,6 @@ footer a{
 section p{
   text-indent: 2em;
 }
-
 
 .bg-imagem {
   /* The image used */

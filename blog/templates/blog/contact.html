@@ -16,14 +16,15 @@
             <p class="text-justify dark-grey-text w-responsive mx-auto mb-5" style="text-indent: 0em">
             Whether you have question about the trekkings, feedbacks or advises, our team is ready to answer you!
             </p>
-            
-            <address> Mumbai - India</address>
+           
+            <img class='ml-5' style='width: 70%; height: auto'  src="{% static 'imagens/contact.png' %}" alt="">  
+
           </div>      
         </div>  
       
  
       <div class="col-md-6">
-        <form action="{% url 'contact_ans' %}" method="POST">
+        <form action="{% url 'contact_ans' %}" method="POST" class="h1-responsive font-weight-bold my-4">
 
           {% csrf_token  %}
        

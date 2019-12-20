@@ -2,4 +2,57 @@
 {% load static%}
 
 {% block content %}
+
+<section class="my-5 mx-5">
+  
+  <!--Section Heading -->
+  <h2 class="h1-responsive font-weight-bold text-center my-3">Mantra</h2>
+  <!-- Section description -->
+  <p class="text-center dark-grey-text w-responsive mx-auto mb-5">
+  
+  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+  
+  </p>
+
+  {% for post in posts %}
+  <!-- Grid row -->
+  <div class="row">
+
+    <!-- Grid column -->
+    <div class="col-lg-5 col-xl-4">
+      
+      <!-- Featured image -->
+      <div class="view overlay rounded z-depth-1-half mb-lg-0 mb-4">
+        <img class="img-fluid" src="{{ post.cover.url }}" alt="img">
+        <a>
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Grid column -->
+    <div class="col-lg-7 col-xl-8">
+      <!-- Post title -->
+      <h3 class="font-weight-bold mb-3"><strong>{{ post.title }}</strong></h3>
+      <!-- Excerpt -->
+      <p class="dark-grey-text text-justify">
+      {{ post.description}} 
+      <!-- Post data -->
+      <p>by <a class="font-weight-bold">{{ post.author }}</a>, {{ post.created_date }}</p>
+      <!-- Read more button -->
+      <a class="btn btn-secondary btn-md" style="color:white" href="{% url 'post_detail' pk=post.pk %}">Read more</a>
+
+    </div>
+    <!-- Grid column -->
+    
+  </div>
+  <!-- Grid row -->
+
+  <hr class="my-5">
+  {% endfor  %}
+  
+  <!---------------------------------------------------------------------------------------->
+
+</section>
+
 {% endblock %}

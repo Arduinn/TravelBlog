@@ -125,3 +125,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = '/home/arduin/Documents/Web Development/WebSites/BartDias/static'
 
+# Media Uploads
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

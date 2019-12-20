@@ -1,4 +1,6 @@
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static 
 from . import views
 
 urlpatterns = [
@@ -6,4 +8,11 @@ urlpatterns = [
     path('contact/', views.contact, name="contact"),
     path('contact_ans/', views.contact_ans, name="contact_ans"),
     path('posts/', views.posts_list, name='posts_list'),
+    path('posts/<int:pk>/', views.post_detail, name='post_detail'),
+
+
 ]
+
+if settings.DEBUG:
+        urlpatterns += static(settings.MEDIA_URL,
+                              document_root=settings.MEDIA_ROOT)
