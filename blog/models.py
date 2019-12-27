@@ -1,6 +1,4 @@
 from django.db import models
-from django.contrib.auth.models import User
-from django.urls import reverse
 from django.conf import settings
 from django.core.mail import send_mail
 from django.utils import timezone
@@ -27,4 +25,5 @@ class Contact(models.Model):
     name = models.CharField(max_length=255)
     email = models.EmailField()
     desc = models.TextField()
-     
+    
+

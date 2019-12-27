@@ -1,29 +1,19 @@
-from django.shortcuts import render, get_list_or_404, get_object_or_404,redirect
+from django.shortcuts import render, get_list_or_404, get_object_or_404
 from django.core.mail import send_mail
 from django.http import HttpResponseForbidden, Http404, HttpResponseRedirect, HttpResponse
 from django.db import models
 from django.utils import timezone
 import datetime
 from .models import Contact, Post
-from .forms import ContactForm
+from .form import ContactForm
 
 # Create your views here.
 def home(request):
-    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-    return render(request, "blog/index.html", {'posts': posts})
+    return render(request, "blog/index.html", {})
 
-def about(request):
-    return render(request, "blog/about.html", {})
-
-def contact(request): 
-    if request.method == 'POST':
-        form  = ContactForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('/contact_ans/')
-    else:
-        form = ContactForm() 
-    return render(request, 'blog/contact.html', {'form': form}) 
+def contact(request):
+    form_class = ContactForm()
+    return render(request, 'blog/contact.html', {'form': form_class}) 
 
 def contact_ans(request):
     return render(request, 'blog/contact_ans.html', {}) 

@@ -1,8 +1,12 @@
-from django.forms import ModelForm
+from django import forms
 from .models import Contact
-import datetime
 
-class ContactForm(ModelForm):
+class ContactForm(forms.ModelForm):
     class Meta:
         model = Contact
-
+        fields = '__all__'
+        widgets = {
+            'name': forms.TextInput(attrs={'class': 'form-control'}),
+            'email': forms.TextInput(attrs={'class': 'form-control'}),
+            'desc': forms.Textarea(attrs={'class': 'form-control','rows' : 15 ,'cols' : 10}),
+        }
