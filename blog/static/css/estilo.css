@@ -10,7 +10,7 @@ a{
   font-weight: 600;
 }
 
-a:hover{
+#menu-bd a:hover{
   text-decoration: none !imporant;
   background: #FFFFFF !important;
   color: #343940 !important;
