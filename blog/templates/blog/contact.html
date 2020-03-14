@@ -3,7 +3,7 @@
 
 {% block content %}
 
-<section class='my-5 mx-7 contact'>
+<section class='jumbotron my-5 mx-7 contact'>
  <div class="container">
    <h1 class="h1-responsive font-weight-bold text-center my-4">Contact Us</h1>
    <br><br>
@@ -27,8 +27,14 @@
         <form action="" method="POST" class="h1-responsive font-weight-bold my-4">
 
           {% csrf_token  %}
-          {{ form }} 
-          <button type="submit" class="btn btn-success">Submit</button>
+            {% for field in form %}
+              <label class="col-sm-4" for="{{ field.name }}">{{ field.label }} : </label>
+                <div class="col-sm-12">
+                  {{ field }}
+                </div>
+            {% endfor %}
+          <button type="submit" class="mt-4 btn btn-success col-sm-12">Submit</button>
+        
         </form>
       </div>
     </div>

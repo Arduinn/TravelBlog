@@ -4,7 +4,7 @@ from django.http import HttpResponseForbidden, Http404, HttpResponseRedirect, Ht
 from django.db import models
 from django.utils import timezone
 import datetime
-from .models import Contact, Post
+from .models import Contact, Post, Photo
 from .forms import ContactForm
 
 # Create your views here.
@@ -36,5 +36,6 @@ def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     return render(request, 'blog/post_detail.html', {'post': post})
 
-def gallery(request):
-    return render(request, 'blog/gallery.html', {}) 
+def photo_list(request):
+    photos = Photo.objects.filter(timestamp__lte=timezone.now()).order_by('timestamp')
+    return render(request, 'blog/gallery.html', {'photos': photos}) 

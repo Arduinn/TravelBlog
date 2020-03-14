@@ -3,12 +3,31 @@
 
 {% block content  %}
 
-<section class="my-5 mx-5">
+<!--     <main role="main">
 
-  Maintenance...
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1 class="jumbotron-heading">Album example</h1>
+      <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
+    
+  </section> -->
 
-</section>
-
+<!--  Page Context  -->
+      
+  <section class="jumbotron my-5 mx-5">
+    <div class="container">
+      {% for photo in photos %}
+        <div class="gallery" style="float:left" >
+          <a target="_blank" href="{{ photo.image.url }}">
+            <img src="{{ photo.image.url }}", alt="Cinque Terre" width="600" height="400">
+          </a>
+          <div class="desc">Add a description of the image here</div>
+        </div>
+      {% endfor %}
+    </div>
+    <div style="clear: both"></div>
+  </section>
+		      
 {% endblock%}
 
 
