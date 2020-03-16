@@ -34,7 +34,7 @@ section p{
 
 .bg-imagem {
   /* The image used */
-  background-image: url("../imagens/back3-imagem.jpg");
+  background-image: url("../imagens/background-image.jpg");
 
   min-height: 380px;
 

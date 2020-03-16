@@ -24,7 +24,7 @@ class Contact(models.Model):
     
     name = models.CharField(max_length=255)
     email = models.EmailField()
-    desc = models.TextField()
+    description = models.TextField()
     
 class Photo(models.Model):
     title = models.CharField(max_length=255)
