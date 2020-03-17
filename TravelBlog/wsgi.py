@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'BartDias.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'TravelBlog.settings')
 
 application = get_wsgi_application()
